@@ -125,16 +125,26 @@ p{
   text-align: center;
 }
 
+.description{
+  margin: 30px 0;
+}
+
+.how_to_use{
+  margin: 30px 0;
+}
+
 .how_to_use ol li{
   text-align: center;
   list-style: none;
 }
 
 .description img{
+  width:100%;
   border-radius: 50%;
 }
 
 .how_to_use img{
+  width:100%;
   border-radius: 50%;
 }
 
@@ -142,4 +152,35 @@ p{
 footer{
   background-color: #66cdaa;
   padding: 30px 0;
+}
+
+// pcサイト
+@media(min-width:820px){
+
+  .slider{
+    height:400px;
+  }
+
+  .description{
+    width:45%;
+  }
+
+  .description img{
+    width: 100%;
+    text-align: center;
+  }
+
+  .how_to_use{
+    width:45%;
+  }
+
+  .how_to_use img{
+    width: 100%;
+    text-align: center;
+  }
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+  }
 }
