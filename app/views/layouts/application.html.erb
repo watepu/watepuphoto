@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <div class="background_transparent">
     <div class="toggle">
       <span></span>
       <span></span>
@@ -25,7 +26,12 @@
       <h1>わてぷフォト</h1>
       <p>学んだことをメモしておけます</p>
     </header>
+
+    <div class="slider">
+    </div>
+
     <%= yield %>
+  </div>
     <script>
     $(function(){
       $('.toggle').click(function(){
