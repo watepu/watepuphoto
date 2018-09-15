@@ -9,16 +9,22 @@
   </head>
 
   <body>
-    <header>
-      <h1>わてぷフォト</h1>
-      <p>学んだことをメモしておけます</p>
-    </header>
     <div class="toggle">
       <span></span>
       <span></span>
       <span></span>
       <span>menu</span>
     </div>
+    <div class="mobile_menu">
+      <ul>
+        <li><a href="#">トップ</a></li>
+        <li><a href="#">新規登録</a></li>
+        <li><a href="#">ログイン</a></li>
+    </div>
+    <header>
+      <h1>わてぷフォト</h1>
+      <p>学んだことをメモしておけます</p>
+    </header>
     <%= yield %>
   </body>
 </html>

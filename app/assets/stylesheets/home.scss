@@ -45,3 +45,47 @@
   font-size:9px;
   top:34px;
 }
+
+// ハンバーガーメニューを上に固定し、隠す
+.mobile_menu{
+  position: fixed;
+  z-index: 2;
+  top:0;
+  background:#fff;
+  color:#000;
+  text-align: center;
+  width:100%;
+  transform: translateY(-100%);
+  transition: all 0.6s;
+}
+
+// 出てくるメニューの体裁を整える
+.mobile_menu ul{
+  background: #ccc;
+  margin:0 auto;
+  padding:0;
+  width:100%;
+}
+
+.mobile_menu ul li{
+  list-style-type: none;
+  padding:0;
+  width:100%;
+  border-bottom:1px dotted #333;
+}
+
+.mobile_menu ul li:last-child{
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.mobile_menu ul li a{
+  display: block;
+  color:#000;
+  padding:1px 0;
+}
+
+
+.mobile_menu.active{
+  transform: translateY(0%);
+}
