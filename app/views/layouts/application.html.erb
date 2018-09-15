@@ -26,5 +26,18 @@
       <p>学んだことをメモしておけます</p>
     </header>
     <%= yield %>
+    <script>
+    $(function(){
+      $('.toggle').click(function(){
+        $(this).toggleClass('active');
+
+        if ($(this).hasClass('active')){
+          $('.mobile_menu').addClass('active');
+        }else{
+          $('.mobile_menu').removeClass('active');
+        }
+      });
+    });
+    </script>
   </body>
 </html>
