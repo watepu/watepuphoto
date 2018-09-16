@@ -170,6 +170,19 @@ footer{
   padding: 30px 0;
 }
 
+// flashメッセージ
+.notice{
+  background-color: #f5f5dc;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.danger{
+  background-color: #ff4500;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 // pcサイト
 @media(min-width:820px){
 

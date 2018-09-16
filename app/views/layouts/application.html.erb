@@ -23,7 +23,7 @@
           <li><%= link_to "マイページ", user_path(current_user.id) %></li>
           <li><a href="#">投稿</a></li>
           <li><a href="#">確認</a></li>
-          <li><a href="#">ログアウト</a></li>
+          <li><%= link_to "ログアウト", session_path(current_user.id), method: :delete %></li>
         <% else %>
           <li><a href="#">新規登録</a></li>
           <li><a href="#">ログイン</a></li>
