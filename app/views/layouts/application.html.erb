@@ -25,8 +25,8 @@
           <li><a href="#">確認</a></li>
           <li><%= link_to "ログアウト", session_path(current_user.id), method: :delete %></li>
         <% else %>
-          <li><a href="#">新規登録</a></li>
-          <li><a href="#">ログイン</a></li>
+          <li><%= link_to "新規登録", new_user_path %></li>
+          <li><%= link_to "ログイン", new_session_path %></li>
         <% end %>
     </div>
     <header>
