@@ -1,0 +1,25 @@
+<h2>投稿一覧</h2>
+
+<table>
+  <tr>
+    <th>アイコン</th>
+    <th>タイトル</th>
+    <th>画像</th>
+    <th>内容</th>
+    <th>編集</th>
+    <th>削除</th>
+    <th>詳細</th>
+  </tr>
+
+  <% @pictures.each do |pic| %>
+  <tr>
+    <td>あとで</td>
+    <td><%= pic.title %></td>
+    <td><%= image_tag pic.image.url %></td>
+    <td><%= pic.content %></td>
+    <td>編集</td>
+    <td>削除</td>
+    <td>詳細</td>
+  </tr>
+  <% end %>
+</table>
