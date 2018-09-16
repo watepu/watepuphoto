@@ -18,7 +18,7 @@
     </div>
     <div class="mobile_menu">
       <ul>
-        <li><a href="#">トップ</a></li>
+        <li><%= link_to "トップ", "/" %></li>
         <% if logged_in? %>
           <li><%= link_to "マイページ", user_path(current_user.id) %></li>
           <li><a href="#">投稿</a></li>
@@ -30,7 +30,7 @@
         <% end %>
     </div>
     <header>
-      <h1>わてぷフォト</h1>
+      <h1><%= link_to "わてぷフォト", "/" %></h1>
       <p>学んだことをメモしておけます</p>
     </header>
 
