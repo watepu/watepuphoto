@@ -15,5 +15,7 @@
   <p><%= @user.email %></p>
 </div>
 
+<p>画像：<%= image_tag(@user.icon.url) if @user.icon.url %></p>
+
   <%= link_to "ユーザー情報編集", edit_user_path, class: "edit_btn" %>
 </div>
