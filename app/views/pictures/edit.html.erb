@@ -1,0 +1,33 @@
+<h2>編集する</h2>
+
+<%= form_with(model: @picture, local: true) do |f| %>
+  <div class="picture_form">
+  <%= f.label :title %>
+  </div>
+  <div class="input_field">
+  <%= f.text_field :title %>
+  </div>
+
+  <div class="picture_form">
+  <%= f.label :image %>
+  </div>
+  <div class="picture_form">
+  <%= image_tag(@picture.image.url) if @picture.image.url %>
+  </div>
+  <div class="input_field">
+  <%= f.file_field :image %>
+  <%= f.hidden_field :image_cache %>
+  </div>
+
+  <div class="picture_form">
+  <%= f.label :content %>
+  </div>
+  <div class="input_field">
+  <%= f.text_field :content %>
+  </div>
+
+
+
+  <%= f.submit "投稿する", :class => "submit_btn" %>
+
+<% end %>

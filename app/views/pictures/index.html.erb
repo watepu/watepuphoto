@@ -7,8 +7,6 @@
     <th>タイトル</th>
     <th>画像</th>
     <th>内容</th>
-    <th>編集</th>
-    <th>削除</th>
     <th>詳細</th>
   </tr>
 
@@ -18,9 +16,7 @@
     <td><%= pic.title %></td>
     <td><%= image_tag pic.image.url %></td>
     <td><%= pic.content %></td>
-    <td>編集</td>
-    <td>削除</td>
-    <td><%= link_to "詳細を見る", picture_path(pic.id), class: "picture_btn" %></td>
+    <td><%= link_to "詳細を見る", picture_path(pic.id), class: "show_btn" %></td>
   </tr>
   <% end %>
 </table>

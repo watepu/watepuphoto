@@ -22,6 +22,21 @@ class PicturesController < ApplicationController
     @picture = Picture.find(params[:id])
   end
 
+  def edit
+    @picture = Picture.find(params[:id])
+  end
+
+  def update
+    @picture = Picture.find(params[:id])
+    if @picture.update(picture_params)
+      flash[:notice] = "編集しました"
+      redirect_to pictures_path
+    else
+      flash[:danger] = "編集に失敗しました"
+      render 'new'
+    end
+  end
+
   private
 
   def picture_params
