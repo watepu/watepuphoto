@@ -21,8 +21,8 @@
         <li><%= link_to "トップ", "/" %></li>
         <% if logged_in? %>
           <li><%= link_to "マイページ", user_path(current_user.id) %></li>
-          <li><a href="#">投稿</a></li>
-          <li><a href="#">確認</a></li>
+          <li><%= link_to "投稿する", new_picture_path %></li>
+          <li><%= link_to "一覧をみる", pictures_path %></li>
           <li><%= link_to "ログアウト", session_path(current_user.id), method: :delete %></li>
         <% else %>
           <li><%= link_to "新規登録", new_user_path %></li>
