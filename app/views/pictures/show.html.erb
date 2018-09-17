@@ -1,25 +1,25 @@
 <h2>詳細を見る</h2>
 
-<div class="picture_form">
+<div class="show_form">
 <h3>タイトル</h3>
 </div>
-<div class="input_field">
+<div class="show_detail">
 <%= @picture.title %>
 </div>
 
-<div class="picture_form">
+<div class="show_form">
 <h3>画像</h3>
 </div>
-<div class="picture_form">
+<div class="show_detail">
 <%= image_tag(@picture.image.url) if @picture.image.url %>
 </div>
 
-<div class="picture_form">
+<div class="show_form">
 <h3>内容</h3>
 </div>
-<div class="input_field">
+<div class="show_detail">
 <%= @picture.content %>
 </div>
 
 <%= link_to "編集する", edit_picture_path(@picture.id), class: "picture_btn" %>
-<%= link_to "投稿する", new_picture_path, class: "picture_btn" %>
+<%= link_to "削除する", picture_path(@picture.id), class: "delete_btn",method: :delete %>
