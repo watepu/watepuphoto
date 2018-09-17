@@ -20,8 +20,10 @@
     <td><%= pic.content %></td>
     <td>編集</td>
     <td>削除</td>
-    <td>詳細</td>
+    <td><%= link_to "詳細を見る", picture_path(pic.id), class: "picture_btn" %></td>
   </tr>
   <% end %>
 </table>
 </div>
+
+<%= link_to "投稿する", new_picture_path, class: "picture_btn" %>

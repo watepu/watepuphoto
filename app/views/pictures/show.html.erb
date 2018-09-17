@@ -1,0 +1,22 @@
+<h2>詳細を見る</h2>
+
+<div class="picture_form">
+<h3>タイトル</h3>
+</div>
+<div class="input_field">
+<%= @picture.title %>
+</div>
+
+<div class="picture_form">
+<h3>画像</h3>
+</div>
+<div class="picture_form">
+<%= image_tag(@picture.image.url) if @picture.image.url %>
+</div>
+
+<div class="picture_form">
+<h3>内容</h3>
+</div>
+<div class="input_field">
+<%= @picture.content %>
+</div>
