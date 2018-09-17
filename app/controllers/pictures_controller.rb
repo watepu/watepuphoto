@@ -8,7 +8,8 @@ class PicturesController < ApplicationController
   end
 
   def create
-    @picture = Picture.create(picture_params)
+    @picture = Picture.new(picture_params)
+    @picture.user_id = current_user.id
     if @picture.save
       flash[:notice] = "画像を投稿しました"
       redirect_to pictures_path
@@ -20,6 +21,7 @@ class PicturesController < ApplicationController
 
   def show
     @picture = Picture.find(params[:id])
+    @favorite = current_user.favorites.find_by(picture_id: @picture.id)
   end
 
   def edit
@@ -46,6 +48,7 @@ class PicturesController < ApplicationController
 
   def confirm
     @picture = Picture.new(picture_params)
+    @picture.user_id = current_user.id
     render :new if @picture.invalid?
   end
 
