@@ -12,7 +12,7 @@
 
   <% @pictures.each do |pic| %>
   <tr>
-    <td>あとで</td>
+    <td><%= image_tag(pic.user.icon.url) if pic.user.icon.url %></td>
     <td><%= pic.title %></td>
     <td><%= image_tag pic.image.url %></td>
     <td><%= pic.content %></td>
