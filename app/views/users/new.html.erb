@@ -1,5 +1,12 @@
 <h2>新規登録</h2>
 
+<% @user.errors.any? %>
+  <% @user.errors.full_messages.each do |m| %>
+  <ul class="error_message">
+    <li><%= m %></li>
+  </ul>
+  <% end %>
+
 <%= form_with(model: @user, local: true) do |f| %>
   <div class="user_form">
   <%= f.label :name %>

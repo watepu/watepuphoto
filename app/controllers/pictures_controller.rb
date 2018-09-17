@@ -44,6 +44,11 @@ class PicturesController < ApplicationController
     redirect_to pictures_path
   end
 
+  def confirm
+    @picture = Picture.new(picture_params)
+    render :new if @picture.invalid?
+  end
+
   private
 
   def picture_params
