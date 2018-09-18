@@ -32,6 +32,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def about
+    @favorite_pictures = current_user.favorite_pictures
+  end
+
   private
 
   def user_params

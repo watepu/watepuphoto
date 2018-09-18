@@ -10,7 +10,9 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new(picture_params)
     @picture.user_id = current_user.id
+    
     if @picture.save
+      SubmitMailer.submit_mail(@picture).deliver
       flash[:notice] = "画像を投稿しました"
       redirect_to pictures_path
     else
