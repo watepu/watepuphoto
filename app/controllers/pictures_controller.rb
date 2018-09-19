@@ -1,4 +1,6 @@
 class PicturesController < ApplicationController
+  before_action :forcibly_redirect, only:[:new,:edit,:show,:destroy]
+
   def index
     @pictures = Picture.all
   end
@@ -10,7 +12,7 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new(picture_params)
     @picture.user_id = current_user.id
-    
+
     if @picture.save
       SubmitMailer.submit_mail(@picture).deliver
       flash[:notice] = "画像を投稿しました"
@@ -58,5 +60,11 @@ class PicturesController < ApplicationController
 
   def picture_params
     params.require(:picture).permit(:title,:content,:image,:image_cache)
+  end
+
+  def forcibly_redirect
+    if current_user.present? == false
+      redirect_to new_session_path
+    end
   end
 end
